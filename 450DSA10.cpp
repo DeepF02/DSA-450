@@ -47,9 +47,6 @@ int minJumps(int arr[], int n)
 }
 int32_t main()
 {
-    /*int t;
-    cin>>t;
-    while(t--){}*/
     int n, k;// c=0, mx=INT_MIN;
     cin>>n;
     int arr[n]; 
