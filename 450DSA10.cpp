@@ -16,8 +16,7 @@ int minJumps(int arr[], int n)
         return -1;
     // initialization stores all time the maximal reachable index in the array.
     int maxReach = arr[0];
-    // stores the number of steps
-    // we can still take
+    // stores the number of steps we can still take
     int step = arr[0];
     // stores the number of jumps necessary to reach that maximal reachable position.
     int jump = 1;
@@ -28,10 +27,8 @@ int minJumps(int arr[], int n)
             return jump;
         // updating maxReach
         maxReach = max(maxReach, i + arr[i]);
-
         // we use a step to get to the current index
         step--;
-
         // If no further steps left
         if (step == 0) {
             // we must have used a jump

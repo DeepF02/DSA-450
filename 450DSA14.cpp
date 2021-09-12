@@ -7,12 +7,10 @@ int32_t main(){
     cin>>n;
     int a[n];
     for(int i=0; i<n; i++) cin>>a[i];
-    
     int maxSum=INT_MIN, currsum=0;
     for(int i=0; i<n; i++){
         currsum+=a[i];
         if(currsum<0) currsum=0;
-        
         maxSum = max(maxSum,currsum);
     }
     // if all the elements of an array are negative
