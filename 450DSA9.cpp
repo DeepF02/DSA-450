@@ -9,9 +9,6 @@ void inputArray(int arr[], int n){
 
 int32_t main()
 {
-    /*int t;
-    cin>>t;
-    while(t--){}*/
     int n, k, maxElement, minElement, result=INT_MAX, ans;
     cin>>k>>n;
     int arr[n];
@@ -24,8 +21,6 @@ int32_t main()
             ans=maxElement-minElement;//this will give min diff of towers for this itr. array
             result=min(ans, result);
         }
-        else
-        continue;
     }
     cout<<result<<endl;
     return 0;
