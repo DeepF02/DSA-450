@@ -3,7 +3,6 @@ using namespace std;
 
 vector<int> find(int arr[], int n , int x )
 {
-    // code here
     vector<int>ans;
     int j=n-1;
     bool flag=0;
@@ -32,5 +31,11 @@ int32_t main()
 {
     int n, x;
     cin>>n>>x;
+    int arr[n];
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    vector<int>ans=find(arr, n, x);
+    for(int i=0; i<2; i++)cout<<ans[i]<<" ";
     return 0;
 }
