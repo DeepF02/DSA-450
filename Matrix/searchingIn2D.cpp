@@ -3,16 +3,34 @@ using namespace std;
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
-        int r=matrix.size();
-        int c=matrix[0].size();
-        for(int i=0; i<r; i++){
-            for(int j=0; j<c; j++)if(matrix[i][j]==target) return true;        
-        }
-        // int i=0, j=c-1;
-        // int m =(i+j)/2;
-        // while(i<j){
-        //     if(matrix[i])
+        //Method 1 Time complexity O(n*m)
+        // int r=matrix.size();
+        // int c=matrix[0].size();
+        // for(int i=0; i<r; i++){
+        //     for(int j=0; j<c; j++)if(matrix[i][j]==target) return true;        
         // }
+
+        // Method 2 Time complexity O(log(n))
+        int r=matrix.size(), c=matrix[0].size(), i=0, j1=0, j2=c, m;
+        while(j1<j2 && i<r){
+            if(target>matrix[i][c-1]){
+                if(i<r){
+                    ++i;
+                    continue;
+                }
+                else break;
+            }
+            m =(j1+j2)/2;
+            if(matrix[i][m]==target)return true;
+            else if (matrix[i][m]>target){
+                if(m==j2)break;
+                j2=m;
+            }
+            else if (matrix[i][m]<target){
+                if(m==j1)break;
+                j1=m;
+            }
+        }
         return false;
     }
 };
@@ -32,9 +50,5 @@ int32_t main()
     cin>>target;
     Solution ans;
     cout<<ans.searchMatrix(matrix, target);
-    // for(int i=0; i<result.size(); i++){
-    //     cout<<result[i]<<" ";
-    // }
-
     return 0;
 }
