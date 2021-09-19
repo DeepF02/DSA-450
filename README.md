@@ -1,6 +1,4 @@
-# DSA-450
-This repo include the 450 DSA questions by Love Babber's DSA Sheet.
-# 450-DSA-Questions-LoveBabbar
+# 450 DSA Questions BY LoveBabbar
 
 ## Questions by Love Babbar: 
 - **Youtube Channel**: https://www.youtube.com/channel/UCQHLxxBFrbfdrk1jF0moTpw 
