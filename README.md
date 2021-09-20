@@ -34,7 +34,7 @@
 
 # DSA Cracker Sheet
 
-***Note* YES indicates avaibality of solution of that particular problem at the moment and rest will be uploaded soon.** 
+***Not:- 'YES' indicates avaibality of solution of that particular problem at the moment and rest will be uploaded soon.*** 
 
 ## Arrays
 
