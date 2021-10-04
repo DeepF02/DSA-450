@@ -29,7 +29,6 @@ int32_t main()
     vector<ll>arr(n);
     for (ll i = 0; i < n; i++)
         cin>>arr[i];
-    
     // while(n--)arr.push_back(n);
     vector<ll>res = ans.nextLargerElement(arr, n);
     for(ll x:res) cout<<x<<" ";
