@@ -79,8 +79,8 @@
 | Array               | Three way partitioning of an array around a given value                                              | <->              |
 | Array               | Minimum swaps required bring elements less equal K together                                          | <->              |
 | Array               | Minimum no. of operations required to make an array palindrome                                       | <->              |
-| Array               | Median of 2 sorted arrays of equal size                                                              | <->              |
-| Array               | Median of 2 sorted arrays of different size                                                          | <->              |
+| Array               | Median of 2 sorted arrays of equal size                                                              |  YES             |
+| Array               | Median of 2 sorted arrays of different size                                                          |  YES             |
 
 </details>
 
@@ -416,10 +416,10 @@
 
 | Topic:              | Problem                                                                                              | Solutions        |
 |:-------------------:|------------------------------------------------------------------------------------------------------|:----------------:|
-| Stacks & Queues     | Implement Stack from Scratch                                                                         | <->              |
-| Stacks & Queues     | Implement Queue from Scratch                                                                         | <->              |
-| Stacks & Queues     | Implement 2 stack in an array                                                                        | <->              |
-| Stacks & Queues     | find the middle element of a stack                                                                   | <->              |
+| Stacks & Queues     | Implement Stack from Scratch                                                                         |  YES             |
+| Stacks & Queues     | Implement Queue from Scratch                                                                         |  YES             |
+| Stacks & Queues     | Implement 2 stack in an array                                                                        |  YES             |
+| Stacks & Queues     | find the middle element of a stack                                                                   |  YES             |
 | Stacks & Queues     | Implement "N" stacks in an Array                                                                     | <->              |
 | Stacks & Queues     | Check the expression has valid or Balanced parenthesis or not.                                       | <->              |
 | Stacks & Queues     | Reverse a String using Stack                                                                         | <->              |
@@ -432,7 +432,7 @@
 | Stacks & Queues     | Reverse a stack using recursion                                                                      | <->              |
 | Stacks & Queues     | Sort a Stack using recursion                                                                         | <->              |
 | Stacks & Queues     | Merge Overlapping Intervals                                                                          | <->              |
-| Stacks & Queues     | Largest rectangular Area in Histogram                                                                | <->              |
+| Stacks & Queues     | Largest rectangular Area in Histogram                                                                |  YES             |
 | Stacks & Queues     | Length of the Longest Valid Substring                                                                | <->              |
 | Stacks & Queues     | Expression contains redundant bracket or not                                                         | <->              |
 | Stacks & Queues     | Implement Stack using Queue                                                                          | <->              |
@@ -453,7 +453,7 @@
 | Stacks & Queues     | Sum of minimum and maximum elements of all subarrays of size “k”.                                    | <->              |
 | Stacks & Queues     | Minimum sum of squares of character counts in a given string after removing “k” characters.          | <->              |
 | Stacks & Queues     | Queue based approach or first non-repeating character in a stream.                                   | <->              |
-| Stacks & Queues     | Next Smaller Element                                                                                 | <->              |
+| Stacks & Queues     | Next Smaller Element                                                                                 |  YES             |
 
 </details>
 
