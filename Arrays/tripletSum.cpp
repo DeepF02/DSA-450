@@ -1,4 +1,4 @@
-//All c++ std template
+// Find the triplet that sum to a given value
 #include <bits/stdc++.h>
 using namespace std;
 
