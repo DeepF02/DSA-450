@@ -58,10 +58,10 @@
 | Array               | find duplicate in an array of N+1 Integers                                                           |  YES             |
 | Array               | Merge 2 sorted arrays without using Extra space.                                                     |  YES             |
 | Array               | Kadane's Algo [V.V.V.V.V IMP]                                                                        |  YES             |
-| Array               | Merge Intervals                                                                                      | <->              |
+| Array               | Merge Intervals                                                                                      |  YES             |
 | Array               | Next Permutation                                                                                     | <->              |
 | Array               | Count Inversion                                                                                      | <->              |
-| Array               | Best time to buy and Sell stock                                                                      | <->              |
+| Array               | Best time to buy and Sell stock                                                                      |  YES             |
 | Array               | find all pairs on integer array whose sum is equal to given number                                   | <->              |
 | Array               | find common elements In 3 sorted arrays                                                              | <->              |
 | Array               | Rearrange the array in alternating positive and negative items with O(1) extra space                 | <->              |
@@ -72,9 +72,9 @@
 | Array               | Given an array of size n and a number k, fin all elements that appear more than " n/k " times.       | <->              |
 | Array               | Maximum profit by buying and selling a share atmost twice                                            | <->              |
 | Array               | Find whether an array is a subset of another array                                                   | <->              |
-| Array               | Find the triplet that sum to a given value                                                           | <->              |
-| Array               | Trapping Rain water problem                                                                          | <->              |
-| Array               | Chocolate Distribution problem                                                                       | <->              |
+| Array               | Find the triplet that sum to a given value                                                           |  YES             |
+| Array               | Trapping Rain water problem                                                                          |  YES             |
+| Array               | Chocolate Distribution problem                                                                       |  YES             |
 | Array               | Smallest Subarray with sum greater than a given value                                                | <->              |
 | Array               | Three way partitioning of an array around a given value                                              | <->              |
 | Array               | Minimum swaps required bring elements less equal K together                                          | <->              |
@@ -94,8 +94,8 @@
 |:-------------------:|------------------------------------------------------------------------------------------------------|:----------------:|
 | Matrix              | Spiral traversal on a Matrix                                                                         | YES              |
 | Matrix              | Search an element in a matriix                                                                       | YES              |
-| Matrix              | Find median in a row wise sorted matrix                                                              | <->              |
-| Matrix              | Find row with maximum no. of 1's                                                                     | <->              |
+| Matrix              | Find median in a row wise sorted matrix                                                              | YES              |
+| Matrix              | Find row with maximum no. of 1's                                                                     | YES              |
 | Matrix              | Print elements in sorted order using row-column wise sorted matrix                                   | <->              |
 | Matrix              | Maximum size rectangle                                                                               | <->              |
 | Matrix              | Find a specific pair in matrix                                                                       | <->              |
@@ -114,7 +114,7 @@
 | Topic:              | Problem                                                                                              | Solutions        |
 |:-------------------:|------------------------------------------------------------------------------------------------------|:----------------:|
 | String              | Reverse a String                                                                                     | YES              |
-| String              | Check whether a String is Palindrome or not                                                          | <->              |
+| String              | Check whether a String is Palindrome or not                                                          | YES              |
 | String              | Find Duplicate characters in a string                                                                | <->              |
 | String              | Why strings are immutable in Java?                                                                   | <->              |
 | String              | Write a Code to check whether one string is a rotation of another                                    | <->              |
@@ -191,8 +191,8 @@
 | Searching & Sorting | Find pivot element in a sorted array                                                                 | <->              |
 | Searching & Sorting | K-th Element of Two Sorted Arrays                                                                    | <->              |
 | Searching & Sorting | Aggressive cows                                                                                      | <->              |
-| Searching & Sorting | Book Allocation Problem                                                                              | <->              |
-| Searching & Sorting | EKOSPOJ:                                                                                             | <->              |
+| Searching & Sorting | Book Allocation Problem                                                                              | YES              |
+| Searching & Sorting | EKOSPOJ:                                                                                             | YES              |
 | Searching & Sorting | Job Scheduling Algo                                                                                  | <->              |
 | Searching & Sorting | Missing Number in AP                                                                                 | <->              |
 | Searching & Sorting | Smallest number with atleastn trailing zeroes infactorial                                            | <->              |
@@ -340,7 +340,7 @@
 
 | Topic:              | Problem                                                                                              | Solutions        |
 |:-------------------:|------------------------------------------------------------------------------------------------------|:----------------:|
-| Greedy              | Activity Selection Problem                                                                           | <->              |
+| Greedy              | Activity Selection Problem                                                                           | YES              |
 | Greedy              | Job SequencingProblem                                                                                | <->              |
 | Greedy              | Huffman Coding                                                                                       | <->              |
 | Greedy              | Water Connection Problem                                                                             | <->              |
@@ -419,15 +419,15 @@
 | Stacks & Queues     | Implement Stack from Scratch                                                                         |  YES             |
 | Stacks & Queues     | Implement Queue from Scratch                                                                         |  YES             |
 | Stacks & Queues     | Implement 2 stack in an array                                                                        |  YES             |
-| Stacks & Queues     | find the middle element of a stack                                                                   |  YES             |
+| Stacks & Queues     | find the middle element of a stack                                                                   | <->              |
 | Stacks & Queues     | Implement "N" stacks in an Array                                                                     | <->              |
-| Stacks & Queues     | Check the expression has valid or Balanced parenthesis or not.                                       | <->              |
-| Stacks & Queues     | Reverse a String using Stack                                                                         | <->              |
-| Stacks & Queues     | Design a Stack that supports getMin() in O(1) time and O(1) extra space.                             | <->              |
-| Stacks & Queues     | Find the next Greater element                                                                        | <->              |
-| Stacks & Queues     | The celebrity Problem                                                                                | <->              |
-| Stacks & Queues     | Arithmetic Expression evaluation                                                                     | <->              |
-| Stacks & Queues     | Evaluation of Postfix expression                                                                     | <->              |
+| Stacks & Queues     | Check the expression has valid or Balanced parenthesis or not.                                       |   YES            |
+| Stacks & Queues     | Reverse a String using Stack                                                                         |   YES            |
+| Stacks & Queues     | Design a Stack that supports getMin() in O(1) time and O(1) extra space.                             |   YES            |
+| Stacks & Queues     | Find the next Greater element                                                                        |   YES            |
+| Stacks & Queues     | The celebrity Problem                                                                                |   YES            |
+| Stacks & Queues     | Arithmetic Expression evaluation                                                                     |   YES            |
+| Stacks & Queues     | Evaluation of Postfix expression                                                                     |   YES            |
 | Stacks & Queues     | Implement a method to insert an element at its bottom without using any other data structure.        | <->              |
 | Stacks & Queues     | Reverse a stack using recursion                                                                      | <->              |
 | Stacks & Queues     | Sort a Stack using recursion                                                                         | <->              |
