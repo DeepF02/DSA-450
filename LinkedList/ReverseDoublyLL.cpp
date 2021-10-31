@@ -1,4 +1,4 @@
-// Write a Program to reverse the Linked List. (Both Iterative and recursive)
+// Write a Program to reverse the Doubly Linked List. (Both Iterative and recursive)
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -6,6 +6,7 @@ struct Node
 {
     int data;
     struct Node *next;
+    struct Node *prev;
 };
 
 // Node* head=NULL; // Global declaration of head
@@ -18,10 +19,14 @@ class LinkedList
         Node*temp=new Node();
         temp->data=dataX;
         temp->next=NULL;
-        if(head==NULL)return temp;
+        temp->prev=NULL;
+        if(head==NULL){
+            return temp;
+        }
         Node* temp1=head;
         while(temp1->next!=NULL)temp1=temp1->next;
         temp1->next=temp;
+        temp->prev=temp1;
         return head;
     }
     //Function to print a linked list ITERATIVE.
@@ -31,33 +36,30 @@ class LinkedList
             head=head->next;
         }
     }
+
     //Function to reverse a linked list **ITERATIVE**.
-    // Node* reverse(Node *head)
-    // {
-    //     Node *curr, *prev, *next;
-    //     curr=head;
-    //     prev=NULL;
-    //     while(curr!=NULL){
-    //         next=curr->next;
-    //         curr->next=prev;
-    //         prev=curr;
-    //         curr=next;
-    //     }
-    //     head=prev;
-    //     return head;
-    // }
-    
+    /*Node* reverse(Node *head)
+    {
+        if(head==NULL || head->next==NULL) return head;
+        Node *curr= head, *newHeadPtr=NULL;
+        while(curr){
+            newHeadPtr=curr->prev;
+            curr->prev=curr->next;
+            curr->next=newHeadPtr;
+            curr=curr->prev;
+        }
+        return newHeadPtr->prev;
+    }*/
+
     //Function to reverse a linked list ***Recursive***.
     Node* reverse(Node *head)
     {
-        if(head==NULL || head->next==NULL) return head; //we check base conditon for 2nd last node
-        Node* curr = reverse(head->next); //when we reach to our base condition curr has address of last node
-        // Node* prevCurr=head->next;
-        // prevCurr->next=head;
-        //we can reduce above 2 statement to single statement as
-        head->next->next=head; //head here is pointing to 2nd last node and we make last Node point to this node i.e head
-        head->next=NULL; // We make this node i.e. currently 2nd last node point to null 
-        return curr;
+        if(!head) return NULL;
+        Node* temp=head->next;
+        head->next=head->prev;
+        head->prev=temp;
+        if(!(head->prev)) return head; 
+        return reverse(head->prev);
     }
 };
 

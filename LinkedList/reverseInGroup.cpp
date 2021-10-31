@@ -7,7 +7,6 @@ struct Node
     int data;
     struct Node *next;
 };
-
 // Node* head=NULL; // Global declaration of head
 
 class LinkedList
@@ -48,8 +47,7 @@ class LinkedList
         }
         if(Next!=NULL) head->next=reverse(Next, k);
         return prev;
-    }
-    
+    }  
 };
 
 int32_t main()
@@ -74,3 +72,7 @@ int32_t main()
     ll.print(head);
     return 0;
 }
+// Time Complexity: O(n). 
+// Traversal of list is done only once and it has 'n' elements.
+// Auxiliary Space: O(n/k). 
+// For each Linked List of size n, n/k or (n/k)+1 calls will be made during the recursion

@@ -31,34 +31,16 @@ class LinkedList
             head=head->next;
         }
     }
-    //Function to reverse a linked list **ITERATIVE**.
-    // Node* reverse(Node *head)
-    // {
-    //     Node *curr, *prev, *next;
-    //     curr=head;
-    //     prev=NULL;
-    //     while(curr!=NULL){
-    //         next=curr->next;
-    //         curr->next=prev;
-    //         prev=curr;
-    //         curr=next;
-    //     }
-    //     head=prev;
-    //     return head;
-    // }
-    
-    //Function to reverse a linked list ***Recursive***.
-    Node* reverse(Node *head)
+    //Function to reverse a linked list ITERATIVE.
+    Node* middleNode(Node *head)
     {
-        if(head==NULL || head->next==NULL) return head; //we check base conditon for 2nd last node
-        Node* curr = reverse(head->next); //when we reach to our base condition curr has address of last node
-        // Node* prevCurr=head->next;
-        // prevCurr->next=head;
-        //we can reduce above 2 statement to single statement as
-        head->next->next=head; //head here is pointing to 2nd last node and we make last Node point to this node i.e head
-        head->next=NULL; // We make this node i.e. currently 2nd last node point to null 
-        return curr;
+        Node *slow = head, *fast = head;
+        // While slow moves by 1 step fast moves by 2
+        // Hence when fast reaches at end slow will be at middle
+        while (fast && fast->next) slow = slow->next, fast = fast->next->next; 
+        return slow;
     }
+    
 };
 
 int32_t main()
@@ -70,9 +52,10 @@ int32_t main()
     head=ll.insert(head, 4);
     head=ll.insert(head, 15);
     head=ll.insert(head, 85);
+    head=ll.insert(head, 75);
     cout << "Given linked list\n";
     ll.print(head);cout<<endl;
-    head=ll.reverse(head);
+    head=ll.middleNode(head);
     ll.print(head);
     return 0;
 }
