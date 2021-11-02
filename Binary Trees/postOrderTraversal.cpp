@@ -31,7 +31,7 @@ public:
         return nodes;
     } //Time complexity O(nodes) //space complexity can be constant
 
-    //Function to return a list containing the postorder traversal of the tree ** Iteratively **.
+    //Function to return a list containing the postorder traversal of the tree ** Iteratively with single stack**.
     void postorderIterative(Node* root){
         if(!root)return;
         stack<Node*> nodeSk;
@@ -54,7 +54,27 @@ public:
                 } 
             }
         }
-    }//Time complexity O(nodes) //space complexity O(H) (H-height of tree)
+    } //Time complexity O(nodes) //space complexity O(H) (H-height of tree)
+
+    //Function to return a list containing the postorder traversal of the tree ** Iteratively with two stack**.
+    /* void postorderIterative(Node* root){
+        if(!root)return;
+        stack<Node*> S1;
+        stack<Node*> S2;
+        Node* currNode=root;
+        S1.push(currNode);
+        while(!S1.empty()){
+            currNode=S1.top();
+            S2.push(S1.top());
+            S1.pop();
+            if(currNode->left)S1.push(currNode->left);
+            if(currNode->right)S1.push(currNode->right);
+        }
+        while(!S2.empty()){
+            cout<<S2.top()->data<<" ";
+            S2.pop();
+        }
+    } */ //Time complexity O(nodes) //space complexity O(2N) (H-height of tree)
 
     //There is also One more type of Traversal Called Morris Traversal its disadvantage is it modifies the tree while traversing. 
     // void postorderMorris(Node* root){

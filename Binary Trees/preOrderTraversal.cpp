@@ -37,18 +37,28 @@ public:
         stack<Node*> nodeSk;
         Node* currNode=root;// start from root node (set current node to root node)
         // run till stack is not empty or current is not NULL
-        while(!nodeSk.empty() || currNode){
-            // Print left children while exist and keep pushing right into the stack.
-            while(currNode){
-                cout<<currNode->data<<" ";
-                if(currNode->right) nodeSk.push(currNode->right);
-                currNode=currNode->left;
-            }
-            // We reach when curr is NULL, so We take out a right child from stack
-            if(!nodeSk.empty()){
-                currNode=nodeSk.top();
-                nodeSk.pop();
-            }
+        // Method 1
+        // while(!nodeSk.empty() || currNode){
+        //     // Print left children while exist and keep pushing right into the stack.
+        //     while(currNode){
+        //         cout<<currNode->data<<" ";
+        //         if(currNode->right) nodeSk.push(currNode->right);
+        //         currNode=currNode->left;
+        //     }
+        //     // We reach when curr is NULL, so We take out a right child from stack
+        //     if(!nodeSk.empty()){
+        //         currNode=nodeSk.top();
+        //         nodeSk.pop();
+        //     }
+        // }
+        //Optimising Method 1 **Method 2**
+        nodeSk.push(currNode);
+        while(!nodeSk.empty()){
+            currNode=nodeSk.top();
+            nodeSk.pop();
+            if(currNode->right) nodeSk.push(currNode->right);
+            if(currNode->left) nodeSk.push(currNode->left);
+            cout<<currNode->data<<" ";
         }
     }//Time complexity O(nodes) //space complexity O(H) (H-height of tree)
 
