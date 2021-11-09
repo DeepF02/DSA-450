@@ -32,6 +32,20 @@ class Solution {
         return root;
     } //Time Complexity O(N) & Space Complexity O(H) {H->heigth of tree}
 
+    //Function to find the mirror of a binary tree by ** Iterative **.
+    // Node* mirror(struct Node* root){
+    //     stack<Node*>s;
+    //     if(root)s.push(root);
+    //     while(!s.empty()){
+    //         Node* p=s.top();
+    //         s.pop();
+    //         if(p->left)s.push(p->left);
+    //         if(p->right)s.push(p->right);
+    //         swap(p->left, p->right);
+    //     }
+    //     return root;
+    // } //Time Complexity O(N) & Space Complexity O(H) {H->heigth of tree}
+
     
     //Function to return a list containing the preorder traversal of the tree *** RECURSIVELY ***.
     vector<int> preorderTraversal(Node* root) {

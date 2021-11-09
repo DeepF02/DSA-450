@@ -6,6 +6,10 @@ struct Node
 {
     int data;
     struct Node *next;
+    Node(int val){
+        data=val;
+        next=NULL;
+    }
 };
 
 // Node* head=NULL; // Global declaration of head
@@ -15,9 +19,7 @@ class LinkedList
     public:
     //Function to insert data in a linked list ITERATIVE.
     Node* insert(Node* head, int dataX){
-        Node*temp=new Node();
-        temp->data=dataX;
-        temp->next=NULL;
+        Node*temp=new Node(dataX);
         if(head==NULL)return temp;
         Node* temp1=head;
         while(temp1->next!=NULL)temp1=temp1->next;
@@ -43,8 +45,7 @@ class LinkedList
     //         prev=curr;
     //         curr=next;
     //     }
-    //     head=prev;
-    //     return head;
+    //     return prev;
     // }
     
     //Function to reverse a linked list ***Recursive***.
@@ -64,8 +65,8 @@ class LinkedList
     {
         // return head of list after adding one
         if(!head) return head;
-        Node* currNode=reverse(head);
-        Node* prevNode=currNode;
+        Node* currNode, *prevNode;
+        prevNode=currNode=reverse(head);
         if(currNode->data<9)currNode->data++;
         else{
             while(currNode->next && currNode->data==9){
@@ -75,9 +76,9 @@ class LinkedList
             if(currNode->data<9)currNode->data++;
             else{
                 currNode->data=0;
-                Node* newNode= new Node();
-                newNode->data=1;
-                newNode->next=NULL;
+                Node* newNode= new Node(1);
+                // newNode->data=1;
+                // newNode->next=NULL;
                 currNode->next=newNode;
             }
         }
@@ -90,10 +91,10 @@ int32_t main()
     Node* head=NULL;
     /* Start with the empty list */
     LinkedList ll;
-    head=ll.insert(head, 20);
-    head=ll.insert(head, 4);
-    head=ll.insert(head, 15);
-    head=ll.insert(head, 85);
+    head=ll.insert(head, 9);
+    head=ll.insert(head, 9);
+    head=ll.insert(head, 9);
+    head=ll.insert(head, 9);
     cout << "Given linked list\n";
     ll.print(head);cout<<endl;
     head=ll.addOne(head);
