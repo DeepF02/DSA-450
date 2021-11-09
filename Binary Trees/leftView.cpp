@@ -13,32 +13,48 @@ struct Node
     }
 };
 class Solution {
+    private:
+    void leftSideView(Node* root,int lvl, vector<int>&ans){
+        if(!root)return;
+        if(ans.size()==lvl)ans.push_back(root->data); //If arr size is same as lvl i.e. we have reached this lvl for first time. 
+        leftSideView(root->left, lvl+1, ans);//First we go left and increase lvl by 1 
+        leftSideView(root->right, lvl+1, ans);//Then we go right and increase lvl by 1 
+    }
+    public:
+    //Function to return a list of nodes visible from the Left view from top to bottom in Binary Tree ***Recursively***.
+    vector<int> leftView(Node* root) {
+        vector<int>ans;
+        leftSideView(root, 0, ans);
+        return ans;
+    }// this function consumes less space then iterative function
+    //Time Complexity O(N) && Space Complexity O(H) 
+
     public:
     //Function to return a list of nodes visible from the Left view from top to bottom in Binary Tree.
-    vector<int> leftView(Node *root)
-    {
-        vector<int>ans;
-        //creating a map to store nodes at a particular level (height).
-        map<int, int>nodes; // nodes[level]=data;
-        queue<pair<Node*, int>>q; // q={currNode, level};
-        if(root)q.push({root, 0});
-        // We traverse the tree in level order traversal
-        while(!q.empty()){
-            auto p=q.front();
-            q.pop();
-            Node* currNode=p.first;
-            int lvl=p.second; // this stores level of tree
-            //If this level key doesn't exist (i.e. its 0 or traversed the first time) then only we push data
-            if(!nodes[lvl])nodes[lvl]=(currNode->data);
+    // vector<int> leftView(Node *root)
+    // {
+    //     vector<int>ans;
+    //     //creating a map to store nodes at a particular level (height).
+    //     map<int, int>nodes; // nodes[level]=data;
+    //     queue<pair<Node*, int>>q; // q={currNode, level};
+    //     if(root)q.push({root, 0});
+    //     // We traverse the tree in level order traversal
+    //     while(!q.empty()){
+    //         auto p=q.front();
+    //         q.pop();
+    //         Node* currNode=p.first;
+    //         int lvl=p.second; // this stores level of tree
+    //         //If this level key doesn't exist (i.e. its 0 or traversed the first time) then only we push data
+    //         if(!nodes[lvl])nodes[lvl]=(currNode->data);
             
-            if(currNode->left)q.push({currNode->left, lvl+1});
-            if(currNode->right)q.push({currNode->right, lvl+1});
-        }
-        //traversing the map and storing the nodes in list at every level.
-        for(auto i: nodes) ans.push_back(i.second);
+    //         if(currNode->left)q.push({currNode->left, lvl+1});
+    //         if(currNode->right)q.push({currNode->right, lvl+1});
+    //     }
+    //     //traversing the map and storing the nodes in list at every level.
+    //     for(auto i: nodes) ans.push_back(i.second);
         
-        return ans;
-    }
+    //     return ans;
+    // }
     //Time Complexity O(N)
     //Space Complexity O(N)
 };
