@@ -31,11 +31,11 @@ public:
     // Function to print a linked list ITERATIVE.
     void print(Node *head)
     {
-        while (head != NULL)
-        {
-            cout << head->data << " ";
-            head = head->next;
-        }
+        Node* temp=head;
+        do {
+            cout << temp->data << " ";
+            temp = temp->next;
+        }while (temp!=head);
     }
     // Function which splits the circular linked list.  head is pointer to head Node of given lined list.  head1_ref1 and *head_ref2
     // are pointers to head pointers of resultant two halves.
@@ -64,12 +64,13 @@ public:
         }
         *head1_ref = head;
         *head2_ref = curr->next;
-    }
+    }// Time Complexity: O(n) where n is the number of nodes in the given Linked List.
+     // Auxilary Space: O(1).
 };
 
 int32_t main()
 {
-    Node *head = NULL;
+    Node *head = NULL, *head1=NULL, *head2=NULL;
     /* Start with the empty list */
     LinkedList ll;
     head = ll.insert(head, 1);
@@ -77,7 +78,18 @@ int32_t main()
     head = ll.insert(head, 4);
     head = ll.insert(head, 5);
     head = ll.insert(head, 7);
-    head->next->next->next->next = head;
-    (ll.isCircular(head)) ? cout << "Given linked list is Circular\n" : cout << "Given linked list is NOT Circular\n";
+    head->next->next->next->next->next = head;
+
+    cout << "Original Circular Linked List: ";
+    ll.print(head);    
+
+    // Split the list
+    ll.splitList(head, &head1, &head2);
+
+    cout << "\nFirst Circular Linked List: ";
+    ll.print(head1);
+    cout << "\nSecond Circular Linked List: ";
+    ll.print(head2);
+
     return 0;
 }

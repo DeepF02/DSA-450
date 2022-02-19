@@ -1,4 +1,4 @@
-// Write a Program to reverse the Linked List. (Both Iterative and recursive)
+// Write a Program to get middle Element of the Linked List. (Both Iterative and recursive)
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -52,10 +52,11 @@ int32_t main()
     head=ll.insert(head, 4);
     head=ll.insert(head, 15);
     head=ll.insert(head, 85);
-    head=ll.insert(head, 75);
+    // head=ll.insert(head, 75);
     cout << "Given linked list\n";
     ll.print(head);cout<<endl;
     head=ll.middleNode(head);
-    ll.print(head);
+    cout<<head->data;
+    // ll.print(head);
     return 0;
 }
