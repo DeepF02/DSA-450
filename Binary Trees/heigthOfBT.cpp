@@ -22,7 +22,7 @@ class Solution {
         return ans;
     } //Time Complexity O(N) & Space Complexity O(H) {H->heigth of tree}
     
-    //Function to find the height of a binary tree by ** Recursion **.
+    //Function to find the height of a binary tree by ** Iterative **.
     int heightByLvlOrder(Node* root)
     {
         int ans=0;

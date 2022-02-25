@@ -17,8 +17,8 @@ class Solution {
     void rightSideView(Node* root,int lvl, vector<int>&ans){
         if(!root)return;
         if(ans.size()==lvl)ans.push_back(root->data); //If arr size is same as lvl i.e. we have reached this lvl for first time.
-        leftSideView(root->right, lvl+1, ans);//First we go right and increase lvl by 1  
-        leftSideView(root->left, lvl+1, ans);//Then we go left and increase lvl by 1 
+        rightSideView(root->right, lvl+1, ans);//First we go right and increase lvl by 1  
+        rightSideView(root->left, lvl+1, ans);//Then we go left and increase lvl by 1 
     }
     public:
     //Function to return a list of nodes visible from the Right view from top to bottom in Binary Tree ***Recursively***.
