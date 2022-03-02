@@ -14,8 +14,9 @@ struct Node
 };
 class Solution {
     public:
+    //this variables be our prev & head of DLL and we need to update them in recursion calls that's why we declare them globaly
+    Node *prev=NULL, *head=NULL;
     // Function to convert binary tree to doubly linked list and return it.
-    Node *prev=NULL, *head=NULL; //this will be our prev & head of DLL
     Node * bToDLL(Node *root)
     {
         // your code here
