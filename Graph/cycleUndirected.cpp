@@ -30,6 +30,22 @@ public:
         return 0;
     }
 
+    // Function to detect cycle in an undirected graph using DFS.
+    bool cycleDFS(int node, int parent, vector<int> adj[], vector<bool> &vis)
+    {
+        vis[node]=1;// Mark the current node as visited
+
+        // Recur for all the vertices adjacent to this vertex
+        for (auto x : adj[node]){
+            if (!vis[x]){ // If an adjacent vertex is not visited, then recur for that adjacent
+                if(cycleDFS(x, node, adj, vis))return 1; // if in any recursion we get loop then it will be true for all recursion
+            }
+            else if (parent != x)// If an adj vertex is visited and isn't parent of current vertex, then there exists a cycle in the graph.
+                return 1;
+        }
+        return 0;
+    }
+
     // Function to detect cycle in an undirected graph.
     bool isCyclic(int V, vector<int> adj[])
     {
@@ -37,11 +53,13 @@ public:
         vector<bool> vis(V + 1, 0);
         // We do BFS to detect any cycle
         for (int i = 0; i < V; i++)
-            if (!vis[i])
-                if (cycleBFS(i, V, adj, vis)) return 1;
+            if (!vis[i]){
+                // if (cycleBFS(i, V, adj, vis)) return 1;
+                if (cycleDFS(i, V, adj, vis)) return 1;
+            }
 
         return 0;
-    } // Time Complexity: O(V+E) && Auxillary Space: O(V)
+    } // Time Complexity: O(N+E) && Auxillary Space: O(N+E +N +N)=O(3N+E)
 };
 
 int32_t main()
