@@ -1,4 +1,4 @@
-// Implement BFS (Breath First Search) algorithm
+// Detect Cycle in UnDirected Graph using BFS/DFS Algo 
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -51,7 +51,7 @@ public:
     {
         // Code here
         vector<bool> vis(V + 1, 0);
-        // We do BFS to detect any cycle
+        // We do BFS/DFS to detect any cycle
         for (int i = 0; i < V; i++)
             if (!vis[i]){
                 // if (cycleBFS(i, V, adj, vis)) return 1;
@@ -75,21 +75,21 @@ int32_t main()
     Solution Graph;
 
     // A graph with cycle
-    vector<int> adjList[5];
-    adjList[1].push_back(0);
-    adjList[0].push_back(2);
-    adjList[2].push_back(1);
-    adjList[0].push_back(3);
-    adjList[3].push_back(4);
+    // vector<int> adjList[5];
+    // adjList[1].push_back(0);
+    // adjList[0].push_back(2);
+    // adjList[2].push_back(1);
+    // adjList[0].push_back(3);
+    // adjList[3].push_back(4);
 
-    Graph.isCyclic(5, adjList)? cout << "Graph contains cycle\n":cout << "Graph doesn't contain cycle\n";
+    // Graph.isCyclic(5, adjList)? cout << "Graph contains cycle\n":cout << "Graph doesn't contain cycle\n";
 
     // A graph without cycle
-    // vector<int> adjList[3];
-    // adjList[0].push_back(1);
-    // adjList[1].push_back(2);
+    vector<int> adjList[3];
+    adjList[0].push_back(1);
+    adjList[1].push_back(2);
  
-    // Graph.isCyclic(3, adjList)?cout << "Graph contains cycle\n": cout << "Graph doesn't contain cycle\n";
+    Graph.isCyclic(3, adjList)?cout << "Graph contains cycle\n": cout << "Graph doesn't contain cycle\n";
 
     return 0;
 }
