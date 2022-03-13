@@ -29,7 +29,6 @@ class Solution {
     }// this function consumes less space then iterative function
     //Time Complexity O(N) && Space Complexity O(H) 
 
-    public:
     //Function to return a list of nodes visible from the Left view from top to bottom in Binary Tree.
     vector<int> leftView(Node *root)
     {
