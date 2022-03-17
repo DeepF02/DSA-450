@@ -10,7 +10,7 @@ public:
     vector<int> bfsOfGraph(int V, vector<int> adjList[]) {
         // Code here
         vector<int>BFS; //We will return our ans in this bfs vector in this  
-        vector<bool>vist(V+1, 0); // We create a visting array for all vertices and mark them 0 initially
+        vector<bool>vist(V, 0); // We create a visting array for all vertices and mark them 0 initially
         for(int i=0; i<V; ++i){ // If the given graph is in components we use this for loop to move to next unconnected component
             if(!vist[i]){ // If the node is not visited we do BFS search for that node
                 queue<int>q; // we create a queue to store the nodes

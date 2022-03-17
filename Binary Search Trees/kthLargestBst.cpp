@@ -56,7 +56,7 @@ public:
 
 int32_t main()
 {
-    /* Constructed binary tree is
+    /* Constructed Binary Search Tree is
               20
             /   \
           10     30

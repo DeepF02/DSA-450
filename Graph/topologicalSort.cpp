@@ -62,7 +62,7 @@ public:
         //Instead of visted array we make a indegree Array
         vector<int>indegree(V, 0);// indegree of a node is no. of edges connecting towards that particular node
 	    for(int i=0; i<V; ++i){//We traverse through each node
-	        for(auto it:adj[i])indegree[it]++; //If that node has adjacent nodes we do thats that adjacent node's +1 in array
+	        for(auto it:adj[i])indegree[it]++;  //If that node has adjacent nodes we do increment to that adjacent node's in array
 	    }
 	    return topologicalSortBFS(V, adj, indegree);
     }
