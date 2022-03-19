@@ -21,6 +21,7 @@ public:
             }
         }
         // As Topological Sorting is Only Possible for Directed Acycllic Graph
+        // Topo sort is nothing but linear order of vertices cnt should be equal to V
         // So if cnt equal to no.of vertices of graph that means there is no cycle and topo sort was successful
         // But if not then topo sort failed and cycle exist in the given graph
         return (cnt==V)?0:1;
