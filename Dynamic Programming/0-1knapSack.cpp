@@ -12,8 +12,27 @@ class Solution
     int knapSack(int W, int wt[], int val[], int n) 
     { 
        // Your code here
-       memset(t, -1, sizeof (t)); //Initialize matriz by -1;
-       return helperSack(W, wt, val, n);
+       // Method 1: Memoization;
+    //    memset(t, -1, sizeof (t)); //Initialize matriz by -1;
+    //    return helperSack(W, wt, val, n);
+
+       // Method 2: Top-Down Appoarch
+       // Time Complexity: O(N*W). As redundant calculations of states are avoided.
+       //Auxiliary Space: O(N*W). The use of 2D array data structure for storing intermediate states
+       for(int i=0; i<n+1; ++i){
+           for(int j=0; j<W+1; ++j){
+               //Initializing the matrix same as recursion Base condition
+               if(i==0 || j==0)t[i][j]=0;
+           }
+       }
+       for(int i=1; i<n+1; ++i){
+           for(int j=1; j<W+1; ++j){
+               //Geting the max value if wt is under capacity
+               if(wt[i-1]<=j)t[i][j]=max(val[i-1] + t[i-1][j-wt[i-1]], t[i-1][j]);
+               else t[i][j]=t[i-1][j]; //If weight is over capacity we simply store here the same value
+           }
+       }
+       return t[n][W];// returning the maximum value of knapsack
     }
     int helperSack(int W, int wt[], int val[], int n){
        if(n==0 || W==0) return 0; //Base condition
