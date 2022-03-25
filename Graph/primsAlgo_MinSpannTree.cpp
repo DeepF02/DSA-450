@@ -61,27 +61,32 @@ class Solution
 int32_t main()
 {
     /* Constructed Graph from given input as
-         0
-      1/ |\2
-      / 2| \
-     1   2   3
-        /2
-       4
-
-    */
-
+        
+        2    3 
+    (0)--(1)--(2) 
+    |    / \   | 
+   6|  8/   \5 |7 
+    |  /     \ | 
+    (3)-------(4) 
+          9     */
+    
     Solution Graph;
      
     // Graph 1
     vector<pair<int, int>> adjList[5];
-    adjList[0].push_back({1, 1});
-    adjList[0].push_back({2, 2});
-    adjList[0].push_back({3, 2});
-    adjList[1].push_back({0, 1});
-    adjList[3].push_back({0, 2});
-    adjList[2].push_back({0, 2});
-    adjList[2].push_back({4, 2});
-    adjList[4].push_back({2, 2});
+    adjList[0].push_back({1, 2});
+    adjList[0].push_back({3, 6});
+    adjList[1].push_back({0, 2});
+    adjList[1].push_back({2, 3});
+    adjList[1].push_back({3, 8});
+    adjList[1].push_back({4, 5});
+    adjList[2].push_back({4, 7});
+    adjList[3].push_back({4, 9});
+    adjList[3].push_back({0, 6});
+    adjList[3].push_back({1, 8});
+    adjList[4].push_back({1, 5});
+    adjList[4].push_back({2, 7});
+    adjList[4].push_back({3, 9});
 
 
     cout << "Following is a Minimum Spanning tree edges Sum: "<<Graph.spanningTree(5, adjList)<< endl;
