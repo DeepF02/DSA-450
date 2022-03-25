@@ -3,13 +3,23 @@
 using namespace std;
 
 class Solution {
+private:
+    // Recursive Method to check palendrome
+    bool check(string& s, int n, int i){
+        if(i>n/2-1) return 1;
+        if(s[n-i-1]!=s[i])return 0;
+        return check(s, n, ++i);
+    }
 public:
     bool isPalindrome(string S)
 	{
-	    string ans = S;
-	    reverse(S.begin(), S.end());
-	    if(S==ans)return true;
-	    return false;
+        // Method 1: Using STL reverse
+	    // string ans = S;
+	    // reverse(S.begin(), S.end());
+        // return if(S==ans)?true:false;
+        
+        // Method 2: Using Recursion
+        return check(S, S.size(), 0);
 	}
 };
 
